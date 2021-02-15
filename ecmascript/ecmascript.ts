@@ -174,33 +174,33 @@ const { primeiroNome: pnome, experiencia: xp } = cientista;
 console.log(`Nome = ${pnome}`);
 console.log(`experiencia = ${xp}`);
 
-// Callback
+// // Callback
 
-function esperar3s(Callback: (dado: string) => void) {
-  setTimeout(() => {
-    Callback("3s depois...");
-  }, 300);
-}
+// function esperar3s(Callback: (dado: string) => void) {
+//   setTimeout(() => {
+//     Callback("3s depois...");
+//   }, 300);
+// }
 
-const resultado = esperar3s(function (resultado: string) {
-  console.log(resultado);
-});
+// const resultado = esperar3s(function (resultado: string) {
+//   console.log(resultado);
+// });
 
-function esperar3sPromisse() {
-  return new Promise((resolve: any) => {
-    setTimeout(() => {
-      resolve("3s depois...");
-    }, 300);
-  });
-}
+// function esperar3sPromisse() {
+//   return new Promise((resolve: any) => {
+//     setTimeout(() => {
+//       resolve("3s depois...");
+//     }, 300);
+//   });
+// }
 
-// esperar3sPromise()
-// .then(dado => console.log(dado))
+// // esperar3sPromise()
+// // .then(dado => console.log(dado))
 
-fetch('https://swapi.co/api/people/1')
-    .then(res => res.json())
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(resFilm => resFilm.json())
-    .then(filme => console.log(filme.title))
+// fetch('https://swapi.co/api/people/1')
+//     .then(res => res.json())
+//     .then(personagem => personagem.films)
+//     .then(films => fetch(films[0]))
+//     .then(resFilm => resFilm.json())
+//     .then(filme => console.log(filme.title))
 
